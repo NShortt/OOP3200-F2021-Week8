@@ -10,6 +10,11 @@ public class Person
     /**
      * Default Constructor
      */
+    Person()
+    {
+        Set("Unknown", 0);
+    }
+
     Person(String name, int age)
     {
         Set(name, age);
@@ -51,4 +56,15 @@ public class Person
     {
         System.out.println(getName() + " says hello!");
     }
+
+    @Override
+    public String toString()
+    {
+        String outputString = "";
+        outputString += "Name: " + getName() + "\n";
+        outputString += "Age: " + getAge() + "\n";
+
+        return outputString;
+    }
+
 }
